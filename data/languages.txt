@@ -1,0 +1,34 @@
+Arabic, ar
+Bulgarian, bg
+Catalan, ca
+Chinese (Simplified), zh-cn
+Chinese (Traditional), zh-tw
+Croatian, hr
+Czech, cs
+Danish, da
+Dutch, nl
+Filipino, tl
+Finnish, fi
+French, fr
+German, de
+Greek, el
+Hebrew, iw
+Hindi, hi
+Indonesian, id
+Italian, it
+Japanese, ja
+Korean, ko
+Latvian, lv
+Lithuanian, lt
+Norwegian, no
+Polish, pl
+Portuguese, pt-BR
+Romanian, ro
+Russian, ru
+Serbian, sr
+Slovak, sk
+Slovenian, sl
+Spanish, es
+Swedish, sv
+Ukrainian, uk
+Vietnamese, vi
