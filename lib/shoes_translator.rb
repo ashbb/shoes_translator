@@ -38,6 +38,7 @@ class Translator < Shoes
     button('paste'){visit '/translate'}
     
     text = clipboard
+    text = 'copy something and paste here' if text.empty?
     words = text.split(' ')
     flows = []
   
