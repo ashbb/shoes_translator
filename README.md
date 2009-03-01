@@ -24,7 +24,7 @@ Snapshots:
 
 Change log:
 -----------
-Mar 01st, 2009: Debugged a bit and added snapshots.
+Mar 01st, 2009: Debugged a bit and added snapshots.<br>
 Mar 01st, 2009: First release 0.0.5
 
 To do list:
