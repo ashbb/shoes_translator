@@ -29,23 +29,29 @@ class Translator < Shoes
   end
   
   def translate
-    background khaki..lightsalmon
+    background white
     make_words_with_flow
     make_dic_area
   end
   
-  def make_words_with_flow
-    button('paste'){visit '/translate'}
+  def make_words_with_flow 
+    style(Link, :stroke => crimson, :underline => nil)
+    style(LinkHover, :stroke => tomato, :fill => nil, :underline => nil) 
+    para link(strong('paste'), :click => '/translate'), :left => 10
+    para link(strong($lang), :click => '/'), :left => 80
+    motion{line 5, 25, width - 8, 25, :stroke => green }
     
     text = clipboard
     text = 'copy something and paste here' if text.empty?
     words = text.split(' ')
     flows = []
   
-    words.each do |w|
-      w += ' '
-      flows << flow{para code(w)}
-      flows[-1].style :width => w.length * 10
+    flow do
+      words.each do |w|
+        w += ' '
+        flows << flow{para code(w)}
+        flows[-1].style :width => w.length * 10
+      end
     end
   
     flows.each_with_index do |f, n|
@@ -56,7 +62,7 @@ class Translator < Shoes
         @msg.text =  search word
         w = @msg.text.length * 7
         f.left + w < width ?  x = f.left : x = f.left - w
-        @area.move x, f.top + 30
+        @area.move x, f.top + 60
         @area.style :width => w
         @area.show
       end
@@ -68,7 +74,7 @@ class Translator < Shoes
   
   def make_dic_area
     @area = stack :width => AW, :height => AH do
-      background yellowgreen, :curve => 5
+      background lightblue, :curve => 5
       @msg = para '', :font => "MS UI Gothic", :size => "xx-small"
     end.hide
   end
@@ -81,4 +87,4 @@ class Translator < Shoes
   end
 end
 
-Shoes.app :title => 'Shoes Translator 0.0.5', :width => 400, :height => 400
+Shoes.app :title => 'Shoes Translator 0.0.6', :width => 400, :height => 400
