@@ -6,7 +6,10 @@ PATH = "http://ajax.googleapis.com/ajax/services/language/" \
 Q = "&q="
 
 AW, AH = 200, 30
-
+ERR = "Error: NULL pointer given.\n" \
+      "Can't reset clipboard so far.\n" \
+      "Copy first and restart."
+      
 class Translator < Shoes
   url '/', :index
   url '/translate', :translate
@@ -24,7 +27,7 @@ class Translator < Shoes
       f.style :width => 95
       f.hover{b.show}
       f.leave{b.hide}
-      f.click{$lang = lang.strip; visit '/translate'}
+      f.click{$country, $lang = country, lang.strip; visit '/translate'}
     end
   end
   
@@ -38,11 +41,10 @@ class Translator < Shoes
     style(Link, :stroke => crimson, :underline => nil)
     style(LinkHover, :stroke => tomato, :fill => nil, :underline => nil) 
     para link(strong('paste'), :click => '/translate'), :left => 10
-    para link(strong($lang), :click => '/'), :left => 80
+    para link(strong($country), :click => '/'), :left => 80
     motion{line 5, 25, width - 8, 25, :stroke => green }
     
-    text = clipboard
-    text = 'copy something and paste here' if text.empty?
+    text = clipboard rescue (alert(ERR); exit)
     words = text.split(' ')
     flows = []
   
