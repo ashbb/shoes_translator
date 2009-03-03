@@ -10,10 +10,11 @@ Usage:
 
 - copy something
 - select a language
-- click `paste` button, then will be pasted from the system clipboard
+- click `paste` link, then will be pasted from the system clipboard
 - show the translation word as mouse hovering
 - if not showing anything, click the word
 - window is resizable
+- re-select language at anytime 
 
 Snapshots:
 ----------
@@ -24,13 +25,14 @@ Snapshots:
 
 Change log:
 -----------
+Mar 03rd, 2009: Replaced Portuguese language id. Added a rescure function. <br>
 Mar 02nd, 2009: Applied a bit makeup. Added the re-select language function.<br>
 Mar 01st, 2009: Debugged a bit and added snapshots. <br>
 Mar 01st, 2009: First release 0.0.5
 
 To do list:
 -----------
-- `error: NULL pointer given` handling
+- `error: NULL pointer given` handling... still not good.
 - use the right font for each language
 
 The last:
