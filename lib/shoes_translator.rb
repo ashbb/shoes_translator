@@ -16,7 +16,7 @@ class Translator < Shoes
   
   def index
     background lightblue..limegreen, :angle => 90
-    para strong "Select a language (click)\n\n"
+    para strong("Select a language (click)\n\n")
     IO.readlines('../data/languages.txt').each do |line|
       country, lang = line.split ','
       b = nil

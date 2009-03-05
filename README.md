@@ -25,6 +25,7 @@ Snapshots:
 
 Change log:
 -----------
+Mar 05th, 2009: Added parenthesize for fixing the warning. <br>
 Mar 05th, 2009: Added a line handling nil value from clipboard method. <br>
 Mar 03rd, 2009: Replaced Portuguese language id. Added a rescure function. <br>
 Mar 02nd, 2009: Applied a bit makeup. Added the re-select language function.<br>
