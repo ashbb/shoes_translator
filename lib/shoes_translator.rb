@@ -45,6 +45,7 @@ class Translator < Shoes
     motion{line 5, 25, width - 8, 25, :stroke => green }
     
     text = clipboard rescue (alert(ERR); exit)
+    text = '' if text.nil?
     words = text.split(' ')
     flows = []
   
